@@ -34,12 +34,6 @@ public class ForecastController {
     RestTemplate rt = new RestTemplate();
 
 
-    /*@RequestMapping(path="/index")
-    public String index(){
-        return "form.html";
-            }*/
-
-    // Get All Forecasts
     @GetMapping(path="/all")
     public @ResponseBody
     Iterable<Forecast> getAllForecasts() {
@@ -54,11 +48,11 @@ public class ForecastController {
     }
 
     @GetMapping(path="/coord/{lat:^-?\\d+(\\.\\d+)?$}/{lon:^-?\\d+(\\.\\d+)?$}")
-    public @ResponseBody Forecast getForecastByCoord(@PathVariable(value = "lat") Double latitude,
-                                                     @PathVariable(value = "lon") Double longitude)
+    public @ResponseBody Forecast getForecastByCoord(@PathVariable Double lat,
+                                                     @PathVariable Double lon)
     {
 
-        Forecast fc = rt.getForObject("https://api.darksky.net/forecast/9c771ff1f84a69d6f4539b004f151dd4/" + latitude + "," + longitude, Forecast.class);
+        Forecast fc = rt.getForObject("https://api.darksky.net/forecast/9c771ff1f84a69d6f4539b004f151dd4/" + lat + "," + lon, Forecast.class);
         forecastRepo.save(fc);
         log.info(fc.toString());
         return fc;

@@ -28,6 +28,7 @@ public class Weather {
         this.daily = daily;
     }
 
+
     public Double getTemperatureHigh() {
         return temperatureHigh;
     }
@@ -48,12 +49,7 @@ public class Weather {
         return daily;
     }
 
-    public Weather(Double temperatureHigh, Double temperatureLow, Double windSpeed, Double precipProbability) {
-        this.temperatureHigh = temperatureHigh;
-        this.temperatureLow = temperatureLow;
-        this.windSpeed = windSpeed;
-        this.precipProbability = precipProbability;
-    }
+
 }
 
 
