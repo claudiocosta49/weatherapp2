@@ -15,6 +15,6 @@ import org.springframework.data.repository.CrudRepository;
 public interface ForecastRepo extends CrudRepository<Forecast, Double> {
 
     boolean existsByLatitudeAndLongitude(Double latitude, Double longitude);
-    List<Forecast> findByLatitudeAndLongitude(Double latitude, Double longitude);
+    Forecast findByLatitudeAndLongitude(Double latitude, Double longitude);
 
 }

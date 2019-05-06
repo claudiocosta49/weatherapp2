@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Weather App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="../static/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../static/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../static/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../static/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../static/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../static/css/util.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <!--===============================================================================================-->
+</head>
+<body>
+
+<div class="bg-weather" style="background-image: url('../static/bg-01.jpg');">
+    <div class="container-weather">
+        <div class="wrap-weather">
+            <form class="weather-form validate-form">
+					<span class="weather-form-title">
+						Weather App
+					</span>
+                <div class="input3-select">
+                        <label>
+                            <input class="input3" step= .0001 type="number" id="latitude" name="latitude" placeholder="Latitude">
+                        </label>
+
+                        <label>
+                            <input class="input3" step= .0001 type="number"  id="longitude" name="longitude" placeholder="Longitude">
+                        </label>
+                </div>
+                <div class="container-weather-form-btn">
+                    <button type="button" class="weather-form-btn" onclick="query()">
+                        Submit
+                    </button>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="forecast" id="forecast" style="width: auto" >
+                    <label>
+                        <textarea hidden style="height: 200px" class="displayDetails" readonly id="day0"></textarea><br>
+                        <textarea hidden style="height: 200px" class="displayDetails" readonly id="day1"></textarea><br>
+                        <textarea hidden style="height: 200px" class="displayDetails" readonly id="day2"></textarea><br>
+                        <textarea hidden style="height: 200px" class="displayDetails" readonly id="day3"></textarea><br>
+                        <textarea hidden style="height: 200px" class="displayDetails" readonly id="day4"></textarea><br>
+                        <textarea hidden style="height: 200px" class="displayDetails" readonly id="day5"></textarea><br>
+                        <textarea hidden style="height: 200px" class="displayDetails" readonly id="day6"></textarea><br>
+                        <textarea hidden style="height: 200px" class="displayDetails" readonly id="day7"></textarea><br>
+                    </label>
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<!--===============================================================================================-->
+<script src="../static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="../static/vendor/bootstrap/js/popper.js"></script>
+<script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="../static/vendor/select2/select2.min.js"></script>
+
+<!--===============================================================================================-->
+<script src="../static/js/main.js"></script>
+
+
+</body>
+</html>

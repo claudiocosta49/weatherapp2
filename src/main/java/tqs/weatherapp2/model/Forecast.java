@@ -44,6 +44,13 @@ public class Forecast {
         this.daily = daily;
 
     }
+    public Forecast(Double latitude, Double longitude){
+
+        this.latitude = latitude;
+        this.longitude = longitude;
+
+
+    }
 
 
     @Override
