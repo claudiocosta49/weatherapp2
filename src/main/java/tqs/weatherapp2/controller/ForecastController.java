@@ -33,6 +33,7 @@ public class ForecastController {
     private static final Logger log = LoggerFactory.getLogger(ForecastController.class);
     RestTemplate rt = new RestTemplate();
 
+
     /*@RequestMapping(path="/index")
     public String index(){
         return "form.html";
@@ -52,7 +53,7 @@ public class ForecastController {
 
     }
 
-    @GetMapping(path="/coord/{lat}/{lon}")
+    @GetMapping(path="/coord/{lat:^-?\\d+(\\.\\d+)?$}/{lon:^-?\\d+(\\.\\d+)?$}")
     public @ResponseBody Forecast getForecastByCoord(@PathVariable(value = "lat") Double latitude,
                                                      @PathVariable(value = "lon") Double longitude)
     {
