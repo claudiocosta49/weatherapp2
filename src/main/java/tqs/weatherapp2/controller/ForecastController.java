@@ -47,7 +47,7 @@ public class ForecastController {
 
     }
 
-    @GetMapping(path="/coord/{lat:^-?\\d+(\\.\\d+)?$}/{lon:^-?\\d+(\\.\\d+)?$}")
+    @GetMapping(path="/coord/{lat:-?\\d+(?:\\.\\d+)?}/{lon:-?\\d+(?:\\.\\d+)?}")
     public @ResponseBody Forecast getForecastByCoord(@PathVariable Double lat,
                                                      @PathVariable Double lon)
     {

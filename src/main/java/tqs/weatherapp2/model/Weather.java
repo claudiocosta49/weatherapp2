@@ -16,8 +16,7 @@ public class Weather {
 
 
     private Double precipProbability;
-    @ManyToOne(cascade={PERSIST, MERGE, REMOVE, REFRESH, DETACH})
-    private DailyDetails daily;
+
     protected Weather(){
     }
     public Weather(Double temperatureHigh, Double temperatureLow, Double windSpeed, Double precipProbability, DailyDetails daily) {
@@ -25,7 +24,6 @@ public class Weather {
         this.temperatureLow = temperatureLow;
         this.windSpeed = windSpeed;
         this.precipProbability = precipProbability;
-        this.daily = daily;
     }
 
 
@@ -45,9 +43,7 @@ public class Weather {
         return precipProbability;
     }
 
-    public DailyDetails getDaily() {
-        return daily;
-    }
+    
 
 
 }
